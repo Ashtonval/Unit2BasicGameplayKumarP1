@@ -2529,6 +2529,9 @@ GameObject:
   - component: {fileID: 4979870403966421760}
   - component: {fileID: 4979870403958906912}
   - component: {fileID: 5321617797305464284}
+  - component: {fileID: 824372654}
+  - component: {fileID: 2536948048629796178}
+  - component: {fileID: 494816079332753476}
   m_Layer: 0
   m_Name: Dog_GermanShepherd_01
   m_TagString: Untagged
@@ -2544,7 +2547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4979870403966207346}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -5.4, y: 0, z: 8.7}
+  m_LocalPosition: {x: -5.66, y: 0, z: 9}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2620,7 +2623,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b96124d46c415418b6724bc6b73ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 15
+--- !u!114 &824372654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979870403966207346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cf26caa215d494da576853632670e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2536948048629796178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979870403966207346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.111260705, y: 0.20086789, z: 0.31261206}
+  m_Center: {x: 0.0008887768, y: 0.1050693, z: 0.046963073}
+--- !u!114 &494816079332753476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979870403966207346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89a14d90fadb1a408a6e74211abc3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4979870403966208894
 GameObject:
   m_ObjectHideFlags: 0

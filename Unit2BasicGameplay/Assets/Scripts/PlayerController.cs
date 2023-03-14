@@ -6,8 +6,10 @@ public class PlayerController : MonoBehaviour
 {
 
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 10.0f;
-    public float xRange = 10;
+    public float xRange = 13;
+    public float zRange = -10;
     public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -34,5 +36,19 @@ public class PlayerController : MonoBehaviour
             //Launch a projectile from the player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+        //Keep the player in bounds
+        {
+            if (transform.position.z < -12)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -12);
+            }
+            if (transform.position.z > -1)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+            }
+        }
     }
-}
+}   
